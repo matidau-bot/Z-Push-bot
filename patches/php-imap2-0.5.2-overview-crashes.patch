@@ -1,0 +1,45 @@
+diff -ru src/Imap2/Functions.php src/Imap2/Functions.php
+--- src/Imap2/Functions.php	2026-10-21 04:48:26.653726516 +0000
++++ src/Imap2/Functions.php	2026-10-21 05:17:11.100863917 +0000
+@@ -194,7 +194,7 @@
+ 
+ 		foreach ($addressList as $addressEntry)
+ 			{
+-			$parsedAddressEntry = \imap_rfc822_write_address($addressEntry[2], $addressEntry[3], $addressEntry[0]);
++			$parsedAddressEntry = \imap_rfc822_write_address($addressEntry[2] ?? "", $addressEntry[3] ?? "", $addressEntry[0] ?? "");
+ 
+ 			if ('@""' == \substr($parsedAddressEntry, -3))
+ 				{
+diff -ru src/Imap2/Roundcube/MessageHeader.php src/Imap2/Roundcube/MessageHeader.php
+--- src/Imap2/Roundcube/MessageHeader.php	2026-10-21 04:48:26.654322674 +0000
++++ src/Imap2/Roundcube/MessageHeader.php	2026-10-21 05:17:11.097830783 +0000
+@@ -40,7 +40,7 @@
+ 	/**
+ 	 * IMAP bodystructure string
+ 	 */
+-	public string $bodystructure;
++	public string|array $bodystructure;
+ 
+ 	/**
+ 	 * Message additional recipients (Cc)
+@@ -50,7 +50,7 @@
+ 	/**
+ 	 * Message charset
+ 	 */
+-	public string $charset;
++	public string $charset = "";
+ 
+ 	/**
+ 	 * Message Content-type
+diff -ru src/Imap2/Roundcube/Mime.php src/Imap2/Roundcube/Mime.php
+--- src/Imap2/Roundcube/Mime.php	2026-10-21 04:48:26.654322674 +0000
++++ src/Imap2/Roundcube/Mime.php	2026-10-21 05:17:29.729071178 +0000
+@@ -29,7 +29,7 @@
+  */
+ class Mime
+ {
+-	private static string $default_charset;
++	private static string $default_charset = "UTF-8";
+ 
+ 	/**
+ 	 * Object constructor.
