@@ -19,12 +19,25 @@ Dovecot runs on 127.0.0.1:10143 with no TLS, user `test`, password `secret` (`do
 ./run.sh /path/to/php-imap2/src my-branch
 ```
 
+To load the library the way Z-Push does, through `src/backend/imap/php-imap2/php-imap2.php`, use wrapper mode with any of the scripts (with ext-imap disabled, for example `PHP_INI_SCAN_DIR` pointing at a copy of the ini directory without the imap ini):
+
+```sh
+php harness/harness.php wrapper /path/to/z-push/src/backend/imap/php-imap2/php-imap2.php
+php harness/zpush-extra.php wrapper /path/to/z-push/src/backend/imap/php-imap2/php-imap2.php
+php harness/moveflags.php wrapper /path/to/z-push/src/backend/imap/php-imap2/php-imap2.php
+```
+
+Restore `fixture/mailbox.tar` into `/srv/zpmail` before each run.
+
 This writes `results/my-branch/native.json`, `lib.json` and `diff.txt`. The last line of `diff.txt` gives the count of identical results. Each `===` entry is a call whose result differs, with the ext-imap result first.
 
 ## Files
 
 | Path | What it is |
 |---|---|
+| `harness/load.php` | Shared loader for the modes `native`, `lib <src>` and `wrapper <php-imap2.php>`. |
+| `harness/zpush-extra.php` | Focused checks for the issues that matter to Z-Push: overview, multi-flag clear and set, search date formats, subscribe and unsubscribe, UTF-7 folder names. |
+| `harness/moveflags.php` | Replays MoveMessage's clear-then-set flag handling for every combination of source flags. |
 | `harness/harness.php` | The comparison script. `php harness.php native` or `php harness.php lib <src>`. Prints JSON to stdout. |
 | `harness/diff.php` | Compares two result files. |
 | `harness/seed.php` | Builds the test mailbox with ext-imap. Only needed to rebuild `fixture/mailbox.tar`. |
@@ -34,6 +47,7 @@ This writes `results/my-branch/native.json`, `lib.json` and `diff.txt`. The last
 | `dovecot/dovecot.conf` | Test server config. |
 | `smoke/` | One-off tests of other libraries without ext-imap: Roundcube's `rcube_imap_generic`, Horde Imap_Client, Webklex/php-imap, DirectoryTree/ImapEngine. Each needs its library installed; see the top of each file. |
 | `patches/` | The local fixes used to get past php-imap2 0.5.2's `imap_fetch_overview` crashes. |
+| `results/2026-10-26-branch/` | The library as vendored on matidau/Z-Push `php-imap2` (identical to 0.5.2), loaded through the wrapper. |
 | `results/2026-10-21/` | First run: `lib` is php-imap2 0.5.2, `libp` is 0.5.2 with the patch, both against php8.3-imap. |
 
 ## Test mailbox

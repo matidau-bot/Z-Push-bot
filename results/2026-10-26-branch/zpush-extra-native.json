@@ -1,0 +1,108 @@
+{
+    "overview: GetMessageList 1:*": "8 messages",
+    "overview: StatMessage uid 2": {
+        "uid": 2,
+        "seen": 0,
+        "flagged": 1,
+        "udate": 1790935200
+    },
+    "overview: message without To (Drafts)": "2 messages",
+    "clearflag multi: before": {
+        "seen": [
+            1,
+            3,
+            4
+        ],
+        "answered": [
+            4
+        ]
+    },
+    "clearflag multi: call": true,
+    "clearflag multi: after": {
+        "seen": [
+            1,
+            3
+        ],
+        "answered": false
+    },
+    "setflag multi: call": true,
+    "setflag multi: after": {
+        "seen": [
+            1,
+            3,
+            5
+        ],
+        "flagged": [
+            2,
+            5
+        ]
+    },
+    "search: SINCE 06-Oct-2026": [
+        6,
+        7,
+        8
+    ],
+    "search: SINCE \"2026-10-06\"": [
+        6,
+        7,
+        8
+    ],
+    "search: SINCE \"6 Oct 2026\"": [
+        6,
+        7,
+        8
+    ],
+    "search: BEFORE \"2026-10-04\"": [
+        1,
+        2,
+        3
+    ],
+    "search: SINCE \"6 Oct 2026\" BEFORE \"2026-10-08\"": [
+        6,
+        7
+    ],
+    "search: SINCE \"2026-10-06\" TEXT \"Plain\"": [
+        6,
+        7,
+        8
+    ],
+    "search: TEXT \"café\"": [
+        2
+    ],
+    "subscribe: create SubA": true,
+    "subscribe: {server}SubA": true,
+    "subscribe: SubA exists after": true,
+    "subscribe: SubA subscribed after": true,
+    "subscribe: create SubB": true,
+    "subscribe: bare SubB": false,
+    "subscribe: SubB exists after": true,
+    "unsubscribe: {server}SubA": true,
+    "unsubscribe: SubA exists after": true,
+    "unsubscribe: SubA subscribed after": false,
+    "utf7: name sent": "Archive/R&AOk-unions 2026 &IBM- &ANw-n&AO8-c&APY-d&AOk-",
+    "utf7: create": true,
+    "utf7: listed as sent": true,
+    "utf7: getmailboxes name": [
+        "Archive/R&AOk-unions 2026 &IBM- &ANw-n&AO8-c&APY-d&AOk-"
+    ],
+    "utf7: status": {
+        "messages": 0
+    },
+    "utf7: move uid 1 in": true,
+    "utf7: append": true,
+    "utf7: reopen and count": [
+        true,
+        2
+    ],
+    "utf7: subscribe": true,
+    "utf7: delete": true,
+    "utf7: gone after delete": true,
+    "utf7: existing folders still listed": [
+        "&BBQEPgQ6BEMEPAQ1BD0EQgRL-",
+        "&ANw-n&AO8-c&APY-d&AOk-"
+    ],
+    "errors": [
+        "SECURITY PROBLEM: insecure server advertised AUTH=PLAIN",
+        "Can't subscribe to mailbox SubB: no such mailbox"
+    ]
+}

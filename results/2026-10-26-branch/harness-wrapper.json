@@ -1,0 +1,830 @@
+{
+    "function_exists": {
+        "result": {
+            "imap_8bit": true,
+            "imap_append": true,
+            "imap_body": true,
+            "imap_check": true,
+            "imap_clearflag_full": true,
+            "imap_close": true,
+            "imap_createmailbox": true,
+            "imap_delete": true,
+            "imap_deletemailbox": true,
+            "imap_errors": true,
+            "imap_expunge": true,
+            "imap_fetch_overview": true,
+            "imap_fetchheader": true,
+            "imap_fetchstructure": true,
+            "imap_getmailboxes": true,
+            "imap_last_error": true,
+            "imap_list": true,
+            "imap_mail_move": true,
+            "imap_mime_header_decode": false,
+            "imap_num_msg": true,
+            "imap_open": true,
+            "imap_ping": true,
+            "imap_renamemailbox": true,
+            "imap_reopen": true,
+            "imap_rfc822_parse_adrlist": true,
+            "imap_search": true,
+            "imap_setflag_full": true,
+            "imap_status": true,
+            "imap_subscribe": true,
+            "imap_utf7_encode": true
+        }
+    },
+    "open_halfopen": {
+        "result": true
+    },
+    "getmailboxes_all": {
+        "result": [
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}&ANw-n&AO8-c&APY-d&AOk-"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}&BBQEPgQ6BEMEPAQ1BD0EQgRL-"
+            },
+            {
+                "attributes": 32,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Archive"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Archive/2024"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Drafts"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Folder with space"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}INBOX"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Sent"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Trash"
+            }
+        ]
+    },
+    "getmailboxes_one": {
+        "result": [
+            {
+                "attributes": 32,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Archive"
+            }
+        ]
+    },
+    "getmailboxes_prefixed": {
+        "result": [
+            {
+                "attributes": 32,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Archive"
+            },
+            {
+                "attributes": 64,
+                "delimiter": "/",
+                "name": "{127.0.0.1:10143/imap/notls/norsh}Archive/2024"
+            }
+        ]
+    },
+    "list_all": {
+        "result": [
+            "{127.0.0.1:10143/imap/notls/norsh}&ANw-n&AO8-c&APY-d&AOk-",
+            "{127.0.0.1:10143/imap/notls/norsh}&BBQEPgQ6BEMEPAQ1BD0EQgRL-",
+            "{127.0.0.1:10143/imap/notls/norsh}Archive",
+            "{127.0.0.1:10143/imap/notls/norsh}Archive/2024",
+            "{127.0.0.1:10143/imap/notls/norsh}Drafts",
+            "{127.0.0.1:10143/imap/notls/norsh}Folder with space",
+            "{127.0.0.1:10143/imap/notls/norsh}INBOX",
+            "{127.0.0.1:10143/imap/notls/norsh}Sent",
+            "{127.0.0.1:10143/imap/notls/norsh}Trash"
+        ]
+    },
+    "list_one": {
+        "result": [
+            "{127.0.0.1:10143/imap/notls/norsh}Drafts"
+        ]
+    },
+    "status:INBOX": {
+        "result": {
+            "messages": 8,
+            "recent": 0,
+            "uidnext": 9,
+            "uidvalidity": 1792559644,
+            "unseen": 5
+        }
+    },
+    "status:Drafts": {
+        "result": {
+            "messages": 1,
+            "recent": 1,
+            "uidnext": 2,
+            "uidvalidity": 1792559645,
+            "unseen": 0
+        }
+    },
+    "status:Archive/2024": {
+        "result": {
+            "messages": 1,
+            "recent": 1,
+            "uidnext": 2,
+            "uidvalidity": 1792559649,
+            "unseen": 0
+        }
+    },
+    "status:&ANw-n&AO8-c&APY-d&AOk-": {
+        "result": {
+            "messages": 1,
+            "recent": 1,
+            "uidnext": 2,
+            "uidvalidity": 1792559651,
+            "unseen": 1
+        }
+    },
+    "status:Folder with space": {
+        "result": {
+            "messages": 0,
+            "recent": 0,
+            "uidnext": 1,
+            "uidvalidity": 1792559650,
+            "unseen": 0
+        }
+    },
+    "status:Missing": {
+        "result": false
+    },
+    "reopen_inbox": {
+        "result": true
+    },
+    "check": {
+        "result": {
+            "Driver": "imap",
+            "Mailbox": "{127.0.0.1:10143/imap/user=\"test\"}INBOX",
+            "Nmsgs": 8,
+            "Recent": 0
+        }
+    },
+    "num_msg": {
+        "result": 8
+    },
+    "search_all_uid": {
+        "result": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    "search_uid:SINCE 06-Oct-2026": {
+        "result": [
+            6,
+            7,
+            8
+        ]
+    },
+    "search_uid:SINCE \"06-Oct-2026\"": {
+        "result": [
+            6,
+            7,
+            8
+        ]
+    },
+    "search_uid:SINCE \"06 Oct 2026\" BEFORE \"09 Oct 2026\"": {
+        "result": false
+    },
+    "search_uid:UNDELETED": {
+        "result": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    "search_uid:ANSWERED": {
+        "result": [
+            4
+        ]
+    },
+    "search_uid:FLAGGED": {
+        "result": [
+            2
+        ]
+    },
+    "search_uid:UNSEEN": {
+        "result": [
+            2,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    "search_uid:KEYWORD $Forwarded": {
+        "result": [
+            3
+        ]
+    },
+    "search_uid:SUBJECT \"café\"": {
+        "result": [
+            2
+        ]
+    },
+    "search_uid:SUBJECT \"nothing-matches\"": {
+        "result": false
+    },
+    "search_seq:ANSWERED": {
+        "result": [
+            4
+        ]
+    },
+    "search_seq:KEYWORD $Forwarded": {
+        "result": [
+            3
+        ]
+    },
+    "search_uid_nocharset:KEYWORD $Forwarded": {
+        "result": [
+            3
+        ]
+    },
+    "fetch_overview_seq": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "overview_uid:1": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:1": {
+        "result": "From: Alice Example <alice@example.com>\r\nTo: test@example.com\r\nSubject: Plain ASCII message\r\nDate: Mon, 05 Oct 2026 09:15:00 +1100\r\nMessage-ID: <plain@example.com>\r\nContent-Type: text/plain; charset=us-ascii\r\n\r\n"
+    },
+    "body_peek_uid:1": {
+        "result": "Hello,\r\nThis is a plain message.\r\n"
+    },
+    "fetchstructure_uid:1": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:2": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:2": {
+        "result": "From: =?UTF-8?B?w4lsb2RpZSBNw7xsbGVy?= <elodie@example.com>\r\nTo: test@example.com\r\nSubject: =?UTF-8?Q?R=C3=A9union_=E2=80=93_caf=C3=A9_=F0=9F=98=80?=\r\nDate: Tue, 06 Oct 2026 10:00:00 +0200\r\nMessage-ID: <utf8@example.com>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n"
+    },
+    "body_peek_uid:2": {
+        "result": "Bonjour, r=C3=A9union au caf=C3=A9 =E2=80=93 =F0=9F=98=80\r\n"
+    },
+    "fetchstructure_uid:2": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:3": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:3": {
+        "result": "From: Bob <bob@example.com>\r\nTo: test@example.com, Carol <carol@example.com>\r\nCc: dave@example.com\r\nSubject: Alternative with a very long subject line that is folded across\r\n two header lines to test unfolding\r\nDate: Wed, 07 Oct 2026 11:30:00 +0000\r\nMessage-ID: <alt@example.com>\r\nMIME-Version: 1.0\r\nContent-Type: multipart/alternative; boundary=\"ALT\"\r\n\r\n"
+    },
+    "body_peek_uid:3": {
+        "result": "--ALT\r\nContent-Type: text/plain; charset=utf-8\r\n\r\nPlain part\r\n--ALT\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<p>HTML <b>part</b></p>\r\n--ALT--\r\n"
+    },
+    "fetchstructure_uid:3": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:4": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:4": {
+        "result": "From: Eve <eve@example.com>\r\nTo: test@example.com\r\nSubject: With attachment and inline image\r\nDate: Thu, 08 Oct 2026 12:00:00 +0000\r\nMessage-ID: <attach@example.com>\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"MIX\"\r\n\r\n"
+    },
+    "body_peek_uid:4": {
+        "result": "--MIX\r\nContent-Type: multipart/related; boundary=\"REL\"\r\n\r\n--REL\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<p>See <img src=\"cid:img1\"></p>\r\n--REL\r\nContent-Type: image/png; name=\"dot.png\"\r\nContent-Transfer-Encoding: base64\r\nContent-ID: <img1>\r\nContent-Disposition: inline; filename=\"dot.png\"\r\n\r\niVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==\r\n--REL--\r\n--MIX\r\nContent-Type: application/pdf; name=\"report.pdf\"\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename*=UTF-8''r%C3%A9sum%C3%A9.pdf\r\n\r\nJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEu\r\nNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3Qg\r\nYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2ht\r\nZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBE\r\nRi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0\r\nZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0\r\nYWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50\r\nCiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0x\r\nLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0\r\nIGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNo\r\nbWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQ\r\nREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQg\r\ndGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0\r\ndGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVu\r\ndAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50CiVQREYt\r\nMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFjaG1lbnQKJVBERi0xLjQgdGVz\r\ndCBhdHRhY2htZW50CiVQREYtMS40IHRlc3QgYXR0YWNobWVudAolUERGLTEuNCB0ZXN0IGF0dGFj\r\naG1lbnQKJVBERi0xLjQgdGVzdCBhdHRhY2htZW50Cg==\r\n--MIX--\r\n"
+    },
+    "fetchstructure_uid:4": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:5": {
+        "exception": "TypeError: imap_rfc822_write_address(): Argument #3 ($personal) must be of type string, null given, called in <z-push>/src/backend/imap/php-imap2/Imap2/Functions.php on line 197"
+    },
+    "fetchheader_uid:5": {
+        "result": "From: camera@example.com\r\nTo: test@example.com\r\nSubject: Alarm without Date header\r\nMessage-ID: <nodate@example.com>\r\n\r\n"
+    },
+    "body_peek_uid:5": {
+        "result": "Motion detected.\r\n"
+    },
+    "fetchstructure_uid:5": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:6": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:6": {
+        "result": "From: =?ISO-8859-1?Q?J=F6rg?= <joerg@example.com>\r\nTo: test@example.com\r\nSubject: =?ISO-8859-1?Q?Gr=FC=DFe?=\r\nDate: Fri, 09 Oct 2026 08:00:00 +0200\r\nMessage-ID: <latin1@example.com>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=iso-8859-1\r\nContent-Transfer-Encoding: 8bit\r\n\r\n"
+    },
+    "body_peek_uid:6": {
+        "result": "bin:4772fcdf6520617573204dfc6e6368656e0d0a"
+    },
+    "fetchstructure_uid:6": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:7": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:7": {
+        "result": "From: Frank <frank@example.com>\r\nTo: test@example.com\r\nReply-To: frank-replies@example.com\r\nSubject: Fwd: Plain ASCII message\r\nDate: Sat, 10 Oct 2026 09:00:00 +0000\r\nMessage-ID: <fwd@example.com>\r\nIn-Reply-To: <plain@example.com>\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"FWD\"\r\n\r\n"
+    },
+    "body_peek_uid:7": {
+        "result": "--FWD\r\nContent-Type: text/plain\r\n\r\nForwarding.\r\n--FWD\r\nContent-Type: message/rfc822\r\n\r\nFrom: Alice <alice@example.com>\r\nSubject: Inner\r\n\r\nInner body\r\n--FWD--\r\n"
+    },
+    "fetchstructure_uid:7": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "overview_uid:8": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "fetchheader_uid:8": {
+        "result": "From: =?ISO-2022-JP?B?GyRCOzNFRBsoQg==?= <yamada@example.com>\r\nTo: test@example.com\r\nSubject: =?ISO-2022-JP?B?GyRCJDMkcyRLJEEkTxsoQg==?=\r\nDate: Sun, 11 Oct 2026 07:00:00 +0900\r\nMessage-ID: <jp@example.com>\r\nContent-Type: text/plain; charset=ISO-2022-JP\r\n\r\n"
+    },
+    "body_peek_uid:8": {
+        "result": "test\r\n"
+    },
+    "fetchstructure_uid:8": {
+        "exception": "TypeError: Cannot assign array to property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$bodystructure of type string"
+    },
+    "after_peek_unseen": {
+        "result": [
+            2,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    "overview_missing_uid": {
+        "result": false
+    },
+    "overview_missing_uid_last_error": {
+        "result": false
+    },
+    "reopen_missing": {
+        "result": true
+    },
+    "reopen_missing_last_error": {
+        "result": false
+    },
+    "reopen_inbox_again": {
+        "result": true
+    },
+    "ping": {
+        "result": true
+    },
+    "utf7_encode": {
+        "result": "??n??c??d??"
+    },
+    "mime_header_decode": {
+        "exception": "Error: Call to undefined function imap_mime_header_decode()"
+    },
+    "setflag_seen": {
+        "result": true
+    },
+    "state_after:setflag_seen": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                4
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": [
+                2
+            ],
+            "KEYWORD $Forwarded": [
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "setflag_forwarded": {
+        "result": true
+    },
+    "state_after:setflag_forwarded": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                4
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": [
+                2
+            ],
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "setflag_answered": {
+        "result": true
+    },
+    "state_after:setflag_answered": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1,
+                4
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": [
+                2
+            ],
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "clearflag_flagged": {
+        "result": true
+    },
+    "state_after:clearflag_flagged": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1,
+                4
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "clearflag_multi": {
+        "result": true
+    },
+    "state_after:clearflag_multi": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "flags_after": {
+        "exception": "Error: Typed property PHPFUI\\Imap2\\Roundcube\\MessageHeader::$charset must not be accessed before initialization"
+    },
+    "append_sent": {
+        "result": true
+    },
+    "append_draft": {
+        "result": true
+    },
+    "status_sent_after_append": {
+        "result": {
+            "messages": 1,
+            "recent": 1,
+            "uidnext": 2,
+            "uidvalidity": 1792559646,
+            "unseen": 1
+        }
+    },
+    "status_drafts_after_append": {
+        "result": {
+            "messages": 2,
+            "recent": 2,
+            "uidnext": 3,
+            "uidvalidity": 1792559645,
+            "unseen": 1
+        }
+    },
+    "drafts_flags_after_append": {
+        "exception": "TypeError: imap_rfc822_write_address(): Argument #3 ($personal) must be of type string, null given, called in <z-push>/src/backend/imap/php-imap2/Imap2/Functions.php on line 197"
+    },
+    "mail_move_to_trash": {
+        "result": true
+    },
+    "state_after:mail_move_to_trash": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "expunge_after_move": {
+        "result": true
+    },
+    "state_after:expunge_after_move": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "status_trash_after_move": {
+        "result": {
+            "messages": 1,
+            "recent": 1,
+            "uidnext": 2,
+            "uidvalidity": 1792559647,
+            "unseen": 1
+        }
+    },
+    "setflag_deleted": {
+        "result": true
+    },
+    "state_after:setflag_deleted": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1
+            ],
+            "DELETED": [
+                3
+            ],
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1,
+                3
+            ],
+            "SEEN": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    "expunge_after_delete": {
+        "result": true
+    },
+    "state_after:expunge_after_delete": {
+        "result": {
+            "ALL": [
+                1,
+                2,
+                4,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": [
+                1
+            ],
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": [
+                1
+            ],
+            "SEEN": [
+                1,
+                2,
+                4
+            ]
+        }
+    },
+    "delete_seq_then_expunge": {
+        "result": [
+            true,
+            true,
+            5
+        ]
+    },
+    "state_after:delete_seq_then_expunge": {
+        "result": {
+            "ALL": [
+                2,
+                4,
+                6,
+                7,
+                8
+            ],
+            "ANSWERED": false,
+            "DELETED": false,
+            "DRAFT": false,
+            "FLAGGED": false,
+            "KEYWORD $Forwarded": false,
+            "SEEN": [
+                2,
+                4
+            ]
+        }
+    },
+    "inbox_uids_after": {
+        "result": [
+            2,
+            4,
+            6,
+            7,
+            8
+        ]
+    },
+    "createmailbox": {
+        "result": true
+    },
+    "subscribe": {
+        "result": false
+    },
+    "createmailbox_exists": {
+        "result": false
+    },
+    "createmailbox_exists_last_error": {
+        "result": "[ALREADYEXISTS] Mailbox already exists (0.001 + 0.000 secs)."
+    },
+    "renamemailbox": {
+        "result": false
+    },
+    "deletemailbox": {
+        "result": false
+    },
+    "deletemailbox_missing": {
+        "result": false
+    },
+    "list_after": {
+        "result": [
+            "{127.0.0.1:10143/imap/notls/norsh}&ANw-n&AO8-c&APY-d&AOk-",
+            "{127.0.0.1:10143/imap/notls/norsh}&BBQEPgQ6BEMEPAQ1BD0EQgRL-",
+            "{127.0.0.1:10143/imap/notls/norsh}Archive",
+            "{127.0.0.1:10143/imap/notls/norsh}Archive/2024",
+            "{127.0.0.1:10143/imap/notls/norsh}Archive/Nouveau dossier &AOk-",
+            "{127.0.0.1:10143/imap/notls/norsh}Drafts",
+            "{127.0.0.1:10143/imap/notls/norsh}Folder with space",
+            "{127.0.0.1:10143/imap/notls/norsh}INBOX",
+            "{127.0.0.1:10143/imap/notls/norsh}Sent",
+            "{127.0.0.1:10143/imap/notls/norsh}Trash"
+        ]
+    },
+    "errors": {
+        "result": [
+            "[ALREADYEXISTS] Mailbox already exists (0.001 + 0.000 secs).",
+            "Can't delete mailbox Archive/Renamed: no such mailbox",
+            "Can't delete mailbox Archive/Renamed: no such mailbox"
+        ]
+    },
+    "close": {
+        "result": true
+    }
+}

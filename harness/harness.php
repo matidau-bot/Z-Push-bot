@@ -1,21 +1,7 @@
 <?php
 // Runs the imap_* calls Z-Push makes and prints normalised results as JSON.
-// Usage: php harness.php native|lib <path-to-php-imap2/src>
-$mode = $argv[1] ?? 'native';
-if ($mode === 'lib') {
-    if (extension_loaded('imap')) { fwrite(STDERR, "ext-imap is loaded; lib mode needs it off\n"); exit(1); }
-    $src = $argv[2];
-    spl_autoload_register(function ($c) use ($src) {
-        foreach (['PHPFUI\\Imap2\\' => "$src/Imap2/", 'IMAP\\' => "$src/IMAP/"] as $p => $d) {
-            if (strncmp($c, $p, strlen($p)) === 0) {
-                $f = $d . str_replace('\\', '/', substr($c, strlen($p))) . '.php';
-                if (is_file($f)) { require $f; return; }
-            }
-        }
-    });
-    require "$src/Imap2/IMAPStubs.php";
-}
-elseif (!extension_loaded('imap')) { fwrite(STDERR, "native mode needs ext-imap\n"); exit(1); }
+// Usage: php harness.php native | lib <php-imap2/src> | wrapper <php-imap2.php>
+require __DIR__ . '/load.php';
 
 $server = '{127.0.0.1:10143/imap/notls/norsh}';
 $out = [];
